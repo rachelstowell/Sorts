@@ -1,0 +1,36 @@
+public class RevisedBubbleSort {
+
+    private int count=1;
+
+    public void bsort(int[] x, int n){
+        if (n!=1){
+            int pass=1;
+            boolean swap=true;
+
+            while((pass<=n-1) && (swap==true)){
+                swap=false;
+
+                for(int i=1; i<=n-pass; i++){
+                    count++;
+                    if(x[i] > x[i+1]){
+                        int temp=x[i+1];
+                        x[i+1]=x[i];
+                        x[i]=temp;
+                        swap=true;
+                    }
+                }
+
+                pass++;
+
+            }
+
+
+        }
+    }
+
+
+    public int getCount(){
+        return count;
+    }
+}
+
